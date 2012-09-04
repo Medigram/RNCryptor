@@ -112,6 +112,9 @@ typedef void (^RNCryptorHandler)(RNCryptor *cryptor, NSData *data);
 - (void)addData:(NSData *)data;
 - (void)finish;
 
+
++ (NSData *)synchronousResultForCryptor:(RNCryptor *)cryptor data:(NSData *)inData error:(NSError **)anError;
+
 /** Generate key given a password and salt using a PBKDF
 *
 * @param password Password to use for PBKDF
